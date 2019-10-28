@@ -1,0 +1,1 @@
+lineal vs jerarquica

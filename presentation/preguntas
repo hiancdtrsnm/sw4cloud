@@ -1,0 +1,42 @@
+# porque segmentación lineal
+
+la segmentacion linea consiste en dividir en segmentos disjunto el texto y
+la segmentación jerarquica cada segmeto es agrupado a partir un segmento comun
+en la segmentación jerarquica utiliza métodos basados en enfoques estadísticos, algoritmos de clustering o requieren la intervención del usuario.
+en la segmentación lineal también posee algoritmos basados en enfoques estadísticos, dificil de entrenar pues se carecen de corpus en español para entrenerlos.
+También poseen algoritmos basados en la en la creación de vectores a  partir de la lematización de las palabras de la oración 
+
+
+# En que consiste el sistema de resolución de correfecias propio
+
+Este sistema consiste en cojunto de reglas predefinidas que son aplicadas cuando en la oración está presente un pronombre que  indica una referencia a una entidad (este, esta, ese, esa) o el sujeto está omitido.
+el pronombre es sustituido por la entidad a la que refiere.
+La regla busca en las oraciones posterioriores las entidades nombradas y el sujeto que coencidan en numero y genero.
+por ejemplo la en las oraciones:
+
+Lo corriente arrastró el barco.
+Esta fue provocada por la caida de la presa.
+
+esta tiene que ser sustituida, como es el nucleo del sujeto tiene altas probabilidades de serlo el nucleo del sujeto anterior y como este coencide en tiempo y número la segunda oración queda de la siguiente forma
+
+la corriente fue provocada.
+
+Un problema que presesnta  es que es incampaz de resolver referencia en las 
+
+# describir los errores en las preguntas y las respuestas
+
+Pronombre incorrecto: 2 [0, 3, 15, 24, 27]
+Falta de contexto: 3 [1, 4, 5, 8, 9, 40, 51]
+Demasiada información: 1 [6, 34]
+Parsing Error: 1 [33, 14, 46]
+Mala Redacción: 1 [53]
+
+respuestas
+
+Mala Redacción (contenido correcto) : 1 [2, 12, 15]
+Mal Contenido: 1 [7]
+Palabras inecesarias : 1 [45, 48, 5, 25, 43, 48]
+Parsing Error: 1 [33, 14, 46, 27]
+Respuestas "vacias": [52, 46, 53, 61]
+
+# describir las causas que provocaron que no se pudieran generar las preguntas y respuestas

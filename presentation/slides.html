@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Hian Cañizares">
+  <title>Arquitectura de Software para la Nube</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/white.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Arquitectura de Software para la Nube</h1>
+  <p class="author">Hian Cañizares</p>
+  <p class="date">9 de abril 2018</p>
+</section>
+
+<section class="slide level1">
+
+<h2>
+<p>Arquitectura de Software para la Nube</p>
+</h2>
+<p>
+<img class="homeimg" height="150" width="150" data-src="img/logo.png" alt="media">
+</p>
+<p>
+<p>
+Autor:
+</p>
+<small> Lic. Hian Cañizares Díaz / <a href="mailto:hian.canizares@matcom.uh.cu">hian.canizares</a>
+<hr>
+<p></small></p>
+</p>
+</section>
+<section class="slide level1">
+
+<h3 id="conozcan-a-commentlyzer">Conozcan a Commentlyzer</h3>
+<p><a href="http://commentlyzer.uh.cu">http://commentlyzer.uh.cu</a></p>
+<img class="homeimg" height="100%" width="100%" data-src="img/commentlyzer.png" alt="media">
+<p>
+</p>
+<p>
+</p>
+</section>
+<section class="slide level1">
+
+<h3 id="commentlyzer">Commentlyzer</h3>
+<p><img class="homeimg" height="100%" width="100%" data-src="img/stack.png" alt="media"></p>
+<p>
+</p>
+</section>
+<section class="slide level1">
+
+<h3 id="factores">12 Factores</h3>
+<p><img  class="col " height="100%" width="100%" data-src="img/12factors.png" alt="media"></p>
+<p>
+</p>
+</section>
+<section class="slide level1">
+
+<h3 id="factores-ya-cumplidos">Factores ya cumplidos</h3>
+<ul>
+<li><a href="http://12factor.net/es/backing-services">I. Código base (Codebase)</a></li>
+<li><a href="http://12factor.net/es/backing-services">II. Dependencias</a></li>
+<li><a href="http://12factor.net/es/backing-services">V. Construir, desplegar, ejecutar</a></li>
+<li><a href="http://12factor.net/es/backing-services">XII. Administración de procesos</a></li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h3 id="no-son-responsabilidad-de-los-programadores-los-servicios-externos">No son responsabilidad de los programadores los servicios externos</h3>
+<p><a href="http://12factor.net/es/backing-services">(IV. Backing services)</a></p>
+<ul>
+<li>Bases de datos</li>
+<li>Ficheros</li>
+<li>Autenticación</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h3 id="conversión-a-microservicios">Conversión a Microservicios</h3>
+<ul>
+<li>Sin estado</li>
+<li>Declarar las dependencias entre los microservicios</li>
+</ul>
+</section>
+<section class="slide level1">
+
+<h3 id="production-vs-stage">Production vs Stage</h3>
+<p><a href="http://12factor.net/es/backing-services">(X. Paridad en desarrollo y producción)</a></p>
+<ul>
+<li>Desde el día 1</li>
+</ul>
+<p>
+</p>
+</section>
+<section class="slide level1">
+
+<h3 id="continuos-delivery-and-deployment">Continuos Delivery and Deployment</h3>
+<p><a href="https://jenkins.io">Jenkins</a> y <a href="https://gitlab.com">Gitlab</a></p>
+<p><img class="homeimg" height="100%" width="100%" data-src="img/continuos.png" alt="media"></p>
+<p>
+</p>
+</section>
+<section class="slide level1">
+
+<h3 id="fin">Fin ?</h3>
+<p>
+</p>
+</section>
+<section class="slide level1">
+
+<h3 id="construir-nueva-infrestuctura-de-software-para-lograrlo">Construir Nueva infrestuctura de software para lograrlo</h3>
+<p><img class="homeimg" height="100%" width="100%" data-src="img/orchestatators.png" alt="media"></p>
+<p><a href="https://kubernetes.io/">Kubernetes</a>, <a href="https://rancher.com/">RancherOS</a> y <a href="https://docs.docker.com/engine/swarm/">Swarm</a></p>
+</section>
+<section class="slide level1">
+
+<h3 id="construir-nueva-infrestuctura-de-software-para-lograrlo-1">Construir Nueva infrestuctura de software para lograrlo</h3>
+<ul>
+<li>Disminuir el uso de soluciones de virtualización por soluciones de Orquestación</li>
+<li>Crear clusters especializados por institución en brindar soporte de Bases de Datos, Almacenamiento y otros servicios comunes</li>
+</ul>
+<p>
+</p>
+</section>
+<section class="slide level1">
+
+<h3 id="pasar-a-utilizar-plataforma-como-servicio">Pasar a utilizar Plataforma como servicio</h3>
+<p><a href="https://flynn.io">Flynn.io</a> <img class="homeimg" height="100%" width="100%" data-src="img/flynn.png" alt="media"></p>
+<p>
+</p>
+</section>
+<section class="slide level1">
+
+<h2 id="gracias">Gracias</h2>
+<p>
+</p>
+</section>
+<section id="preguntas" class="slide level1">
+<h1>¿Preguntas?</h1>
+<p>
+</p>
+</section>
+<section class="slide level1">
+
+<h2>
+<p>Arquitectura de Software para la Nube</p>
+</h2>
+<p>
+<img class="homeimg" height="150" width="150" data-src="img/logo.png" alt="media">
+</p>
+<p>
+<p>
+Autor:
+</p>
+<small> Lic. Hian Cañizares Díaz / <a href="mailto:hian.canizares@matcom.uh.cu">hian.canizares</a>
+<hr>
+</small>
+</p>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
